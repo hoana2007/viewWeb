@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebHub — Hữu ích</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Glow FX -->
+  <div class="bg-glow"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <!-- Đã bỏ logo GitHub, thay bằng icon link hiện đại -->
+        <i class="fa-solid fa-link brand-icon"></i>
+        <span class="brand-name">WebHub</span>
+        <span class="brand-badge">Directory</span>
+      </div>
+
+      <div class="nav-controls">
+        <div class="stats-counter" id="total-stats">
+          <i class="fa-solid fa-cubes"></i> Loading...
+        </div>
+        
+        <button id="theme-toggle" class="btn-icon" title="Chuyển chế độ Sáng / Tối">
+          <i class="fa-regular fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-badge">
+        <i class="fa-solid fa-bolt"></i> hoana2007
+      </div>
+      <h1 class="hero-title">Khám phá &amp; Lan tỏa <br><span class="text-gradient">Liên kết Web hữu ích</span></h1>
+      <p class="hero-desc">Bộ sưu tập các trang web, tài nguyên và công cụ hữu ích. Cập nhật liên tục.</p>
+    </section>
+
+    <!-- Control Bar: Search + Filter -->
+    <section class="control-panel">
+      <!-- Search Box -->
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Tìm kiếm theo link, mô tả hoặc phân loại... (Ấn '/' để tìm)" autocomplete="off">
+        <kbd class="search-shortcut">/</kbd>
+      </div>
+
+      <!-- Categories Filter -->
+      <div class="categories-bar" id="category-container">
+        <button class="cat-chip active" data-kind="all">
+          <i class="fa-solid fa-border-all"></i> Tất cả
+        </button>
+      </div>
+    </section>
+
+    <!-- Web Cards Grid -->
+    <section class="web-grid" id="web-grid">
+      <!-- Loading State -->
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Đang đồng bộ dữ liệu từ Google Sheet...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification cho Sao Chép -->
+  <div id="toast" class="toast">Đã sao chép liên kết vào bộ nhớ tạm!</div>
+
+  <script src="script.js"></script>
+  <footer>
+    <span class="footer-text">
+      <i class="fa-regular fa-copyright"></i>
+      <span>2026 &mdash; hoana2007</span>
+      <i class="fa-solid fa-heart footer-heart"></i>
+    </span>
+  </footer>
+</body>
+</html>
