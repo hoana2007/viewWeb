@@ -34,6 +34,33 @@
           <i class="fa-solid fa-cubes"></i> Loading...
         </div>
         
+        <!-- Language Switcher Component -->
+        <div class="lang-dropdown-wrapper" id="lang-dropdown-wrapper">
+          <button id="lang-toggle-btn" class="btn-lang" type="button" aria-expanded="false" aria-haspopup="true" title="Chuyển đổi ngôn ngữ / Switch language">
+            <i class="fa-solid fa-globe lang-icon"></i>
+            <span class="lang-flag-current" id="current-lang-flag">🇻🇳</span>
+            <span class="lang-code" id="current-lang-code">VI</span>
+            <i class="fa-solid fa-chevron-down lang-chevron"></i>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="menu">
+            <div class="lang-menu-title" id="lang-menu-title">Ngôn ngữ / Language</div>
+            <button type="button" class="lang-option active" data-lang="vi" role="menuitem">
+              <span class="lang-option-left">
+                <span class="lang-flag">🇻🇳</span>
+                <span class="lang-label">Tiếng Việt</span>
+              </span>
+              <i class="fa-solid fa-check lang-check-icon"></i>
+            </button>
+            <button type="button" class="lang-option" data-lang="en" role="menuitem">
+              <span class="lang-option-left">
+                <span class="lang-flag">🇬🇧</span>
+                <span class="lang-label">English</span>
+              </span>
+              <i class="fa-solid fa-check lang-check-icon"></i>
+            </button>
+          </div>
+        </div>
+
         <button id="theme-toggle" class="btn-icon" title="Chuyển chế độ Sáng / Tối">
           <i class="fa-regular fa-sun"></i>
         </button>
@@ -49,8 +76,8 @@
       <div class="hero-badge">
         <i class="fa-solid fa-bolt"></i> hoana2007
       </div>
-      <h1 class="hero-title">Khám phá &amp; Lan tỏa <br><span class="text-gradient">Liên kết Web hữu ích</span></h1>
-      <p class="hero-desc">Bộ sưu tập các trang web, tài nguyên và công cụ hữu ích. Cập nhật liên tục.</p>
+      <h1 class="hero-title" id="hero-title">Khám phá &amp; Lan tỏa <br><span class="text-gradient">Liên kết Web hữu ích</span></h1>
+      <p class="hero-desc" id="hero-desc">Bộ sưu tập các trang web, tài nguyên và công cụ hữu ích. Cập nhật liên tục.</p>
     </section>
 
     <!-- Control Bar: Search + Filter -->
@@ -73,9 +100,9 @@
     <!-- Web Cards Grid -->
     <section class="web-grid" id="web-grid">
       <!-- Loading State -->
-      <div class="loading-state">
+      <div class="loading-state" id="loading-state">
         <div class="spinner"></div>
-        <p>Đang đồng bộ dữ liệu từ Google Sheet...</p>
+        <p id="loading-msg">Đang đồng bộ dữ liệu từ Google Sheet...</p>
       </div>
     </section>
 
